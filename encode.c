@@ -1,8 +1,1 @@
-int main(int argc, char* argv[])
-{
-	int count;
-	char *table[20];
-
-	
-
-}
+int main(int argc, char* argv[]);
