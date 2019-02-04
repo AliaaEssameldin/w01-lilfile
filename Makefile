@@ -5,7 +5,7 @@ LDFLAGS = -lpthread
 
 lilfile: wcounter.o encoder.o
 
-wcounter.o: wcounter.h wcounter.o
+wcounter.o: wcounter.h wcounter.c
 	$(CC) $(CFLAGS) -c wcounter.c
 
 encoder.o: encoder.c encoder.h
