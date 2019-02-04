@@ -28,10 +28,12 @@ if not org_exists:
 command1 = "lilfile -e " + org + " encodedfile.txt"
 command2 = "lilfile -o encodedfile.txt new_org.txt"
 
-subprocess.call (command1)
-subprocess.call (command2)
-subprocess.call ("")
-Shell_Output = subprocess.check_output(["diff", "org.txt", "new_org.txt"])
+Speed_1 = subprocess.check_output(["time", "lilfile", "-e", org, "encodedfile.txt"])
+Speed_2 = subprocess.check_output(["time", "lilfile", "-d", "encodedfile.txt", "new_org.txt"])
+
+print "Encoding fininshed in " + Speed_1 + "\n"
+print "Decoding fininshed in " + Speed_2 + "\n"
+Shell_Output = subprocess.check_output(["diff", "-s", "org.txt", "new_org.txt"])
 print (Shell_Output)
 
 
