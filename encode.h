@@ -2,6 +2,11 @@
 #include <string.h>
 #include "_wordcount_h"
 
+struct nodeSymbol 
+{
+	char* word[MAXWOrDSIZE];
+	char symbol;
+	struct nodeSymbol* next;
+}
 
-
-int encode(struct note *swl);
+struct nodeSymbol *encode(struct note *swl);
