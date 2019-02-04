@@ -19,7 +19,7 @@ int same_word(char *w1, char *w2)
 
 	while(*a != '\0' && *b != '\0')
 	{
-		if (*a != *b) return 0;
+		if (*a != *b) return 2;
 	}
 
 	if (*a == *b) return 1;
@@ -69,7 +69,7 @@ struct node *sort(struct node *swl)
 		}
 		else
 		{
-			
+
 		}
 	}
 
