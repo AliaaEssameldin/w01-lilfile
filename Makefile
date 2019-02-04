@@ -15,6 +15,6 @@ main.o: main.c wcounter.h encoder.h
 	$(CC) $(CFLAGS) -c main.c
 
 test: 
-	python lilfile_test.py -o originalfile.txt -e encodedfile.txt
+	python lilfile_test.py
 
 clean: 
