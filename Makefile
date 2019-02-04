@@ -3,7 +3,7 @@ CC = gcc
 CFLAGS = -g -Wall
 LDFLAGS = -lpthread
 
-lilfile: wcounter.o encoder.o
+lilfile: main.o wcounter.o encoder.o
 
 wcounter.o: wcounter.h wcounter.c
 	$(CC) $(CFLAGS) -c wcounter.c
