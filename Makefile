@@ -3,15 +3,15 @@ CC = gcc
 CFLAGS = -g -Wall
 LDFLAGS = -lpthread
 
-lilfile: main.o wcounter.o encoder.o
+lilfile: main.o wcounter.o encode.o
 
 wordcount.o: wordcount.h wordcount.c
 	$(CC) $(CFLAGS) -c wordcount.c
 
-encoder.o: wordcount.o encoder.c encoder.h
-	$(CC) $(CFLAGS) -c encoder.c
+encode.o: wordcount.o encode.c encode.h
+	$(CC) $(CFLAGS) -c encode.c
 
-main.o: main.c wordcount.h encoder.h
+main.o: main.c wordcount.h encode.h
 	$(CC) $(CFLAGS) -c main.c
 
 test: 
